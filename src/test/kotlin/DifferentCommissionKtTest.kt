@@ -83,6 +83,6 @@ class DifferentCommissionKtTest {
             sumPreviousTransfer = sumPreviousTransfer,
             sumTransfer = sumTransfer
         )
-        assertEquals(result, 187500.0)
+        assertEquals(result, 1875000.0)
     }
 }
