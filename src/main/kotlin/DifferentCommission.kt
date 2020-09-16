@@ -13,7 +13,7 @@ const val limitMasterCard = 7500000
 
 fun main() {
 
-    val result = commission("MasterCard", 5000000, 25000000)
+    val result = commission("Visa", 5000000, 25000000)
     val res = result.roundToInt()
     println("Комиссия = $res копеек")
 
