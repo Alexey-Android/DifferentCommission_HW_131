@@ -1,5 +1,3 @@
-package ru.netology
-
 import kotlin.math.roundToInt
 
 //все суммы в копейках
