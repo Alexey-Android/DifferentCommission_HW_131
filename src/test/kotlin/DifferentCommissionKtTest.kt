@@ -7,15 +7,10 @@ class DifferentCommissionKtTest {
 
     fun commission_VKPay() {
 
-        val typeCard = "VKPay"
-        val sumPreviousTransfer = 500000
-        val sumTransfer = 250000
-
-
         val result = commission(
-            typeCard = typeCard,
-            sumPreviousTransfer = sumPreviousTransfer,
-            sumTransfer = sumTransfer
+            typeCard = "VKPay",
+            sumPreviousTransfer = 500_000,
+            sumTransfer = 250_000
         )
         assertEquals(result, 0.0)
     }
@@ -24,15 +19,10 @@ class DifferentCommissionKtTest {
 
     fun commission_MasterCard_limit() {
 
-        val typeCard = "MasterCard"
-        val sumPreviousTransfer = 500000
-        val sumTransfer = 250000
-
-
         val result = commission(
-            typeCard = typeCard,
-            sumPreviousTransfer = sumPreviousTransfer,
-            sumTransfer = sumTransfer
+            typeCard = "MasterCard",
+            sumPreviousTransfer = 500_000,
+            sumTransfer = 250_000
         )
         assertEquals(result, 0.0)
     }
@@ -40,15 +30,10 @@ class DifferentCommissionKtTest {
 
     fun commission_MasterCard_noLimit() {
 
-        val typeCard = "MasterCard"
-        val sumPreviousTransfer = 5000000
-        val sumTransfer = 25000000
-
-
         val result = commission(
-            typeCard = typeCard,
-            sumPreviousTransfer = sumPreviousTransfer,
-            sumTransfer = sumTransfer
+            typeCard = "MasterCard",
+            sumPreviousTransfer = 5_000_000,
+            sumTransfer = 25_000_000
         )
         assertEquals(result, 152000.0)
     }
@@ -57,15 +42,10 @@ class DifferentCommissionKtTest {
 
     fun commission_Visa_limit() {
 
-        val typeCard = "Visa"
-        val sumPreviousTransfer = 500000
-        val sumTransfer = 250000
-
-
         val result = commission(
-            typeCard = typeCard,
-            sumPreviousTransfer = sumPreviousTransfer,
-            sumTransfer = sumTransfer
+            typeCard = "Visa",
+            sumPreviousTransfer = 500_000,
+            sumTransfer = 250_000
         )
         assertEquals(result, 3500.0)
     }
@@ -73,15 +53,10 @@ class DifferentCommissionKtTest {
 
     fun commission_Visa_noLimit() {
 
-        val typeCard = "Visa"
-        val sumPreviousTransfer = 5000000
-        val sumTransfer = 25000000
-
-
         val result = commission(
-            typeCard = typeCard,
-            sumPreviousTransfer = sumPreviousTransfer,
-            sumTransfer = sumTransfer
+            typeCard = "Visa",
+            sumPreviousTransfer = 5_000_000,
+            sumTransfer = 25_000_000
         )
         assertEquals(result, 187500.0)
     }
